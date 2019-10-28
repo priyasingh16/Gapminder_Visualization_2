@@ -63,6 +63,129 @@ But it is fails to capture the relationship between income, life expectancy and
 child mortality over time which each other as they are not in the same plot.  
 
 ## Problem 4
+I choose linear regression model with different transformations to quantify the 
+relationship between income (GDP per capita) and life expectancy over time.
+
+To get the data, I merged the data frame for gdp per capita, life expectancy and child mortality
+on year and geo. 
+
+life_expectancy ~ income
+
+First to model the relationship, I choose a linear regression model with no transformation.
+On evaluating the model, Mean squared error was 178.85 and Variance score was 0.32.
+On visualizing the model we can see that it is not a good fit for the data.
+
+![alt text](images/linear_order1_life_exp.png)
+
+Plotting the residual plot for the model
+
+![alt text](images/residual_linear_order1_life_exp.png)
+
+Here we can clearly see that the residuals are not randomly distributed and the linear 
+model with no transformation on the variables is not a good fit for the data.
+
+On looking at a plot I feel that applying log transformation on income might 
+result in a good fit.
+
+life_expectancy ~ log(income)
+
+On trying that, the Mean squared error is 87.64 and Variance score is 0.67.
+On visualizing the model we can see that it is a better fit than the previous model
+for the data.
+
+![alt text](images/linear_logx_1_life_exp.png)
+
+Plotting the residual plot for the model
+
+![alt text](images/residual_logx_1_life_exp.png)
+
+On taking year into account and modeling a multivariate linear regression model.
+Here I am taking log transform of income and year with no transformation.
+
+life_expectancy ~ log(income) + year
+
+On trying that, the Mean squared error is 54.50 and Variance score is 0.79.
+On visualizing the model we can see that it is a better fit than the previous model
+for the data.
+
+![alt text](images/multivariate_life_exp.png)
+
+Plotting the residual plot for the model
+
+![alt text](images/residual_multi_life_exp.png)
+
+Here we can clearly see that this model is better than all the previously tried models.
+This model uses time, and it is evident from the plot that as year increases life expectancy and income increases.
+So incorporating year into the model improves its performance.
+
+From the plot we can see that life expectancy increases as income increases and becomes steady after 
+sometime around when income is greater than 50K. Still the life expectancy is around 80 and 
+doesn't increase much as income increases further.  
+
+The relevant code for this can be found at Gapminder_2.ipynb under Problem 4 headline.
+
+
+## Problem 5
+
+<b> child_mortality ~ income </b>
+
+I choose linear regression model with different transformations to quantify the 
+relationship between income (GDP per capita) and child mortality over time.
+
+First to model the relationship, I choose a linear regression model with no transformation.
+On evaluating the model, Mean squared error was 19971.17 and Variance score was 0.27.
+On visualizing the model we can see that it is not a good fit for the data.
+
+![alt text](images/linear_order1_child.png)
+
+Plotting the residual plot for the model
+
+![alt text](images/residual_linear_order1_life_exp.png)
+
+Here we can clearly see that the residuals are not randomly distributed and the linear 
+model with no transformation on the variables is not a good fit for the data as the distribution is 
+not linear.
+
+<b>child_mortality ~ log(income)</b>
+
+Trying linear model with log transformation on income. On evaluating the model, Mean squared error 
+was 9916.22 and Variance score was 0.64.
+Visualizing the fit and the residuals.
+
+![alt text](images/linear_logx_1_child.png)
+
+Plotting the residual plot for the model
+
+![alt text](images/residual_logx_1_child.png)
+
+On visualizing the model we can see that it is a better fit than the previous model for the data.
+
+On taking year into account and modeling a multivariate linear regression model.
+Here I am taking log transform of income and year with no transformation.
+
+<b>child_mortality ~ log(income) + year </b>
+
+On trying that, the Mean squared error is 5956.31 and Variance score is 0.78.
+On visualizing the model we can see that it is a better fit than the previous model
+for the data.
+
+![alt text](images/multivariate_child.png)
+
+Plotting the residual plot for the model
+
+![alt text](images/residual_multi_child.png)
+
+Here we can clearly see that this model is better than all the previously tried models.
+This model uses time, and it is evident from the plot that as year increases child mortality decreases
+and income increases.
+So incorporating year into the model improves its performance.
+
+From the plot we can see that life expectancy increases as income increases and becomes steady after 
+sometime around when income is greater than 50K. Still the child mortality is around 50 and 
+doesn't decrease much as income increases further.  
+
+The relevant code for this can be found at Gapminder_2.ipynb under Problem 5 headline.
+
 
 
 
