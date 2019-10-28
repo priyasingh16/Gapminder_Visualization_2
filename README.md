@@ -25,7 +25,7 @@ income across all the countries individually in separate plot
 and using color to group countries by continents. Also, I have 
 visualized each continent separately too.
 
-His plot is easy to interpret when you want to see the how the
+His plot is easy to interpret when you want to see how the
 income is changing over time across continents. But it gets 
 difficult to interpret how the income is changing across 
 countries as it is difficult to distinguish among so many colors. It gets better when the countries are divided by
@@ -48,7 +48,7 @@ visualize the relationship between income over time for each continent
 
 The major difference between our plot is that I have plotted 4 plots, one for
 each continent and visualized the relationship between income (GDP / capita), life expectancy, and child
-mortality over time for that continent. Another different is that she has used interactive
+mortality over time for that continent. Another difference is that she has used interactive
 plot and I have used a static plot. I feel that here interactive plot is not helping 
 much in the visualization and a static plot should suffice as there is not a lot of 
 information in the plot. Also interactivity adds computational overhead. 
@@ -180,7 +180,7 @@ This model uses time, and it is evident from the plot that as year increases chi
 and income increases.
 So incorporating year into the model improves its performance.
 
-From the plot we can see that life expectancy increases as income increases and becomes steady after 
+From the plot we can see that child mortality decreases as income increases and becomes steady after 
 sometime around when income is greater than 50K. Still the child mortality is around 50 and 
 doesn't decrease much as income increases further.  
 
