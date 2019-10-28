@@ -136,7 +136,7 @@ First to model the relationship, I choose a linear regression model with no tran
 On evaluating the model, Mean squared error was 19971.17 and Variance score was 0.27.
 On visualizing the model we can see that it is not a good fit for the data.
 
-![alt text](images/linear_order1_child.png)
+![alt text](images/linear_child.png)
 
 Plotting the residual plot for the model
 
